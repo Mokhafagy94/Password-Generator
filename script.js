@@ -94,33 +94,33 @@ function getPasswordOptions() {
   
   var lowercaseConfirm = confirm("Include lowercase letters?");
   if (lowercaseConfirm === true) {
-    for (var i = 0; i < lowercases.length; i++) {
+    for (var i = 0; i < lowerCasedCharacters.length; i++) {
       inputs.push(lowercases[i]);
     }
-    console.log(inputs)
+    console.log(inputs[i])
   }
   var uppercaseConfirm = confirm("Include uppercase letters?");
   if (uppercaseConfirm === true) {
-    for (var i = 0; i < uppercases.length; i++) {
+    for (var i = 0; i < upperCasedCharacters.length; i++) {
       inputs.push(uppercases[i]);
     }
-    console.log(inputs)
+    console.log(inputs[i])
   }
 
   var numberConfirm = confirm("Include numbers?");
   if (numberConfirm === true) {
-    for (var i = 0; i < numbers.length; i++) {
+    for (var i = 0; i < numericCharacters.length; i++) {
       inputs.push(numbers[i]);
     }
-    console.log(inputs)
+    console.log(inputs[i])
   }
 
   var specialsConfirm = confirm("Include special characters?");
   if (specialsConfirm === true) {
-    for (var i = 0; i < specials.length; i++) {
+    for (var i = 0; i < specialCharacters.length; i++) {
       inputs.push(specials[i]);
     }
-    console.log(inputs)
+    console.log(inputs[i])
   }
 }
 
@@ -148,7 +148,7 @@ function generatePassword() {
  var passLength = prompt("Enter desired amount of characters:")
 
  //Checks for valid password length
- if (passLength < 8 || passLength > 128 || isNaN(passLength)) {
+ if (passLength < 8 || passLength > 128 || (passLength)) {
    alert("Invalid entry - Please enter a number between 8 and 128");
    return
  }
